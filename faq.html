@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Protein &amp; Nutrition Questions Answered | ProteinCalc</title>
+<meta name="description" content="Answers to common questions about protein intake, kidney safety, plant vs animal protein, and meal timing.">
+<link rel="canonical" href="https://YOUR-SITE-URL/faq.html">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"How much protein do I need per day?","acceptedAnswer":{"@type":"Answer","text":"Most active adults need between 1.2 and 2.4 grams of protein per kilogram of body weight per day, depending on activity level and goal."}},
+    {"@type":"Question","name":"Can I eat too much protein?","acceptedAnswer":{"@type":"Answer","text":"For healthy individuals, protein intakes up to roughly 2.8-3.5 g/kg body weight have been studied without adverse effects on kidney function."}},
+    {"@type":"Question","name":"Is plant protein as effective as animal protein?","acceptedAnswer":{"@type":"Answer","text":"Yes, when total daily intake and amino acid variety are adequate across sources like legumes, grains, and soy."}},
+    {"@type":"Question","name":"Should I spread protein evenly across meals?","acceptedAnswer":{"@type":"Answer","text":"Evidence suggests distributing protein across 3-5 meals may support muscle protein synthesis slightly better than concentrating it in one sitting."}}
+  ]
+}
+</script>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#175E8C" stroke-width="2"/><circle cx="14" cy="16" r="3.4" fill="#1FA97E"/><circle cx="26" cy="16" r="3.4" fill="#175E8C"/><circle cx="20" cy="26" r="3.4" fill="#1FA97E"/><path d="M14 16L20 26M26 16L20 26" stroke="#175E8C" stroke-width="1.6"/></svg>
+      ProteinCalc
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="calculators.html">All Calculators</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html" class="active">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+      <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero container">
+  <div class="breadcrumb"><a href="index.html">Home</a> / FAQ</div>
+  <h1 style="font-size:clamp(28px,4vw,44px);">Frequently asked questions</h1>
+  <p class="section-lead">Straight answers to the questions we get most.</p>
+</section>
+
+<section class="section-tight">
+  <div class="container" style="max-width:820px;">
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q">How much protein do I need per day? <span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Most active adults need between 1.2 and 2.4 grams of protein per kilogram of body weight per day, depending on activity level and goal. Use the <a href="index.html#calculator">calculator</a> for a number personalized to your stats.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I eat too much protein? <span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">For healthy individuals, research has studied intakes up to roughly 2.8–3.5 g/kg body weight without adverse effects on kidney function. Anyone with existing kidney disease should consult a physician first.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is plant protein as effective as animal protein? <span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, when total daily intake and amino acid variety are adequate. Combining legumes, whole grains, and soy across the day covers the full essential amino acid profile.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Should I spread protein evenly across meals? <span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Evidence suggests distributing protein across 3–5 meals, with roughly 0.3–0.4 g/kg per meal, may support muscle protein synthesis slightly better than concentrating it in one sitting.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do these calculators account for medical conditions? <span class="plus">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">No. All results are general, population-level estimates. They do not account for kidney disease, liver disease, diabetes, pregnancy, or other conditions. Always consult a physician or registered dietitian for individual guidance.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 ProteinCalc. All rights reserved.</span>
+      <span><a href="legal.html">Privacy &amp; Disclaimer</a></span>
+    </div>
+  </div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.nav-burger');
+  const links = document.querySelector('.nav-links');
+  if (burger && links) burger.addEventListener('click', () => links.classList.toggle('open'));
+  const toggle = document.querySelector('.theme-toggle');
+  const root = document.documentElement;
+  function lsGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+  function lsSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+  if (lsGet('pc-theme') === 'dark') root.setAttribute('data-theme', 'dark');
+  function updateIcon(){
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    toggle.innerHTML = isDark
+      ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
+      : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
+  }
+  if (toggle) { updateIcon(); toggle.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    if (isDark) { root.removeAttribute('data-theme'); lsSet('pc-theme','light'); }
+    else { root.setAttribute('data-theme','dark'); lsSet('pc-theme','dark'); }
+    updateIcon();
+  }); }
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    if (!q) return;
+    q.addEventListener('click', () => {
+      const wasOpen = item.classList.contains('open');
+      item.closest('.faq-list')?.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+});
+</script>
+</body>
+</html>

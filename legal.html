@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy &amp; Medical Disclaimer | ProteinCalc</title>
+<meta name="description" content="ProteinCalc privacy policy and medical disclaimer.">
+<link rel="canonical" href="https://YOUR-SITE-URL/legal.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#175E8C" stroke-width="2"/><circle cx="14" cy="16" r="3.4" fill="#1FA97E"/><circle cx="26" cy="16" r="3.4" fill="#175E8C"/><circle cx="20" cy="26" r="3.4" fill="#1FA97E"/><path d="M14 16L20 26M26 16L20 26" stroke="#175E8C" stroke-width="1.6"/></svg>
+      ProteinCalc
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="calculators.html">All Calculators</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+      <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero container">
+  <div class="breadcrumb"><a href="index.html">Home</a> / Privacy &amp; Disclaimer</div>
+  <h1 style="font-size:clamp(26px,3.6vw,38px);">Privacy Policy &amp; Medical Disclaimer</h1>
+  <p style="color:var(--ink-soft);font-size:14px;">Last updated: July 12, 2026</p>
+</section>
+
+<section class="section prose" style="max-width:760px;margin:0 auto;">
+  <div class="container" style="max-width:760px;">
+    <h2>Medical Disclaimer</h2>
+    <p>The calculators and content on ProteinCalc are provided for general informational and educational purposes only. They are not intended to diagnose, treat, cure, or prevent any disease, and do not constitute medical, dietetic, or professional advice of any kind.</p>
+    <p>Results from our protein, BMI, BMR, TDEE, lean body mass, ideal weight, water intake, and calorie calculators are population-level estimates based on published formulas. They do not account for individual medical history, medications, or conditions such as kidney disease, liver disease, diabetes, pregnancy, or eating disorders.</p>
+    <p>Always consult a physician, registered dietitian, or other qualified healthcare provider before making significant changes to your diet, exercise routine, or supplement intake.</p>
+
+    <h2>Privacy Policy</h2>
+    <h3>What we collect</h3>
+    <p>Calculator inputs (age, height, weight, activity level, etc.) are processed in your browser to generate results and are not transmitted to or stored on our servers unless you explicitly submit them through a form such as our contact page.</p>
+    <h3>Cookies &amp; analytics</h3>
+    <p>We may use cookies and privacy-conscious analytics to understand aggregate site usage to improve the site. This data is not used to identify you personally.</p>
+    <h3>Advertising</h3>
+    <p>If this site displays advertising (for example through Google AdSense), third-party vendors may use cookies to serve ads based on prior visits. You can opt out of personalized advertising through your browser or ad settings.</p>
+    <h3>Your choices</h3>
+    <p>You can clear cookies at any time through your browser settings. Questions about this policy can be sent through our <a href="contact.html">contact page</a>.</p>
+
+    <h2>Terms of Use</h2>
+    <p>By using ProteinCalc, you agree that all original text, design, and code on this site are the property of ProteinCalc unless otherwise noted, and that the site is provided "as is" without warranty of any kind. ProteinCalc is not liable for any direct or indirect damages arising from use of this site or reliance on its content.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 ProteinCalc. All rights reserved.</span>
+      <span>Not a substitute for professional medical advice.</span>
+    </div>
+  </div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.nav-burger');
+  const links = document.querySelector('.nav-links');
+  if (burger && links) burger.addEventListener('click', () => links.classList.toggle('open'));
+  const toggle = document.querySelector('.theme-toggle');
+  const root = document.documentElement;
+  function lsGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+  function lsSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+  if (lsGet('pc-theme') === 'dark') root.setAttribute('data-theme', 'dark');
+  function updateIcon(){
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    toggle.innerHTML = isDark
+      ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
+      : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
+  }
+  if (toggle) { updateIcon(); toggle.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    if (isDark) { root.removeAttribute('data-theme'); lsSet('pc-theme','light'); }
+    else { root.setAttribute('data-theme','dark'); lsSet('pc-theme','dark'); }
+    updateIcon();
+  }); }
+});
+</script>
+</body>
+</html>

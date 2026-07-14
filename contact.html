@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — Nutrition & Training Guides | ProteinCalc</title>
-<meta name="description" content="Research-backed articles on protein, nutrition, and training — from protein timing to muscle recovery.">
-<link rel="canonical" href="https://YOUR-SITE-URL/blog.html">
+<title>Contact ProteinCalc</title>
+<meta name="description" content="Get in touch with the ProteinCalc team for questions, feedback, or partnership inquiries.">
+<link rel="canonical" href="https://YOUR-SITE-URL/contact.html">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,12 +17,11 @@
     </a>
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
-      <a href="index.html">Protein Calculator</a>
       <a href="calculators.html">All Calculators</a>
+      <a href="blog.html">Blog</a>
       <a href="faq.html">FAQ</a>
-      <a href="blog.html" class="active">Blog</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
     <div class="nav-actions">
       <button class="theme-toggle" aria-label="Toggle dark mode"></button>
@@ -34,54 +33,29 @@
 </header>
 
 <section class="page-hero container">
-  <div class="breadcrumb"><a href="index.html">Home</a> / Blog</div>
-  <h1 style="font-size:clamp(28px,4vw,44px);">Nutrition &amp; training guides</h1>
-  <p class="section-lead">Straightforward, research-backed articles — no fad claims.</p>
+  <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+  <h1 style="font-size:clamp(28px,4vw,44px);">Get in touch</h1>
+  <p class="section-lead">Questions, feedback, or partnership inquiries — we read every message.</p>
 </section>
 
 <section class="section-tight">
-  <div class="container" style="display:grid;grid-template-columns:2.2fr 1fr;gap:44px;align-items:start;">
-    <div>
-      <div class="grid-2" style="margin-top:0;">
-        <a href="blog-how-much-protein.html" class="blog-card">
-          <div class="blog-thumb"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M4 19h16M4 15l4-4 3 3 5-6 4 5" stroke="#175E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="blog-body">
-            <span class="tag-chip">Nutrition</span>
-            <div class="blog-meta" style="margin-top:10px;"><span>Jul 8, 2026</span>·<span>7 min read</span></div>
-            <h3 style="font-size:17px;">How Much Protein Do You Really Need?</h3>
-            <p style="font-size:14px;">A research-backed breakdown of intake targets by goal, age, and training status.</p>
-          </div>
-        </a>
-        <a href="blog-protein-timing.html" class="blog-card">
-          <div class="blog-thumb"><svg width="40" height="40" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1FA97E" stroke-width="2"/><path d="M12 7v5l4 2" stroke="#1FA97E" stroke-width="2" stroke-linecap="round"/></svg></div>
-          <div class="blog-body">
-            <span class="tag-chip">Performance</span>
-            <div class="blog-meta" style="margin-top:10px;"><span>Jul 3, 2026</span>·<span>5 min read</span></div>
-            <h3 style="font-size:17px;">Does Protein Timing Actually Matter?</h3>
-            <p style="font-size:14px;">What the "anabolic window" research actually says about when to eat.</p>
-          </div>
-        </a>
+  <div class="container" style="max-width:560px;">
+    <form class="glass calc-card" onsubmit="event.preventDefault(); document.getElementById('formOk').style.display='block'; this.reset();">
+      <div class="field-row single">
+        <div class="field"><label for="cname">Name</label><input type="text" id="cname" required></div>
       </div>
-    </div>
-
-    <aside>
-      <div class="card" style="margin-bottom:20px;">
-        <h3 style="font-size:15px;">Categories</h3>
-        <ul style="margin-top:12px;">
-          <li style="margin-bottom:10px;"><a href="blog.html">Nutrition</a></li>
-          <li style="margin-bottom:10px;"><a href="blog.html">Performance</a></li>
-        </ul>
+      <div class="field-row single">
+        <div class="field"><label for="cemail">Email</label><input type="email" id="cemail" required></div>
       </div>
-      <div class="card">
-        <h3 style="font-size:15px;">Popular tags</h3>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
-          <span class="tag-chip">protein</span>
-          <span class="tag-chip">muscle gain</span>
-          <span class="tag-chip">fat loss</span>
-          <span class="tag-chip">recovery</span>
+      <div class="field-row single">
+        <div class="field">
+          <label for="cmsg">Message</label>
+          <textarea id="cmsg" rows="5" required style="width:100%;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font-family:inherit;font-size:15px;"></textarea>
         </div>
       </div>
-    </aside>
+      <button type="submit" class="btn btn-primary btn-block">Send message</button>
+      <p id="formOk" style="display:none;color:var(--green-700);font-size:14px;margin-top:14px;">Thanks — your message has been noted. We'll get back to you soon.</p>
+    </form>
   </div>
 </section>
 
@@ -97,9 +71,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.nav-burger');
   const links = document.querySelector('.nav-links');
-  if (burger && links) {
-    burger.addEventListener('click', () => links.classList.toggle('open'));
-  }
+  if (burger && links) burger.addEventListener('click', () => links.classList.toggle('open'));
   const toggle = document.querySelector('.theme-toggle');
   const root = document.documentElement;
   function lsGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
